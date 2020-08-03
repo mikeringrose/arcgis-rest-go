@@ -16,6 +16,7 @@ type Client struct {
 	baseURL    string
 	httpClient *http.Client
 	Portal     PortalAPI
+	Community  CommunityAPI
 }
 
 // Context TODO
@@ -32,6 +33,7 @@ func NewClient(httpClient *http.Client, portalURL string) *Client {
 	}
 
 	client.Portal = PortalAPI{client}
+	client.Community = CommunityAPI{client}
 
 	return client
 }
