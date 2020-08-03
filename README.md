@@ -12,7 +12,6 @@ import (
 )
 
 func main() {
-	ctx := context.Background()
 	ts := oauth2.StaticTokenSource(
 		&oauth2.Token{AccessToken: "..."},
 	)
